@@ -55,7 +55,7 @@ header {
     position: fixed;
     height: 70px;
     width: 100%;
-    background-color: #d9294f;
+    background-color: #D92950;
     z-index: 1;
 }
 
@@ -93,8 +93,12 @@ header {
 /* general settings */
 
 section {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+
+ul li {
+    list-style: none;
 }
 
 .btn {
@@ -157,7 +161,7 @@ a {
 
 .section-red {
     color: white !important;
-    background-color: #d9294f !important;
+    background-color: #D92950 !important;
 }
 
 
@@ -214,7 +218,7 @@ h1 span {
 #technos {
     display: flex;
     justify-content: space-between !important;
-    margin: 0 10%;
+    margin: 0 9%;
     padding: 35px 0;
     align-items: center;
 }
@@ -225,7 +229,7 @@ h1 span {
 
 #technos li img {
     opacity: 0.5;
-    width: 51px;
+    width: 49px;
 }
 
 
@@ -281,6 +285,7 @@ h1 span {
     text-align: left;
     margin-bottom: 50px;
     margin-right: 20px;
+    margin-left: 10px;
 }
 
 
@@ -319,40 +324,15 @@ h1 span {
 #slide h2 {
     text-align: center;
     color: #fff;
-}
-
-#slide ul img {
-    width: 100px;
+    margin-top: 30px;
 }
 
 #slide>div>div {
     overflow: hidden;
-    max-width: 1000px;
+    max-width: 990px;
     margin: auto;
-    padding: 10px 10vw;
+    padding: 10px 0;
     align-items: center;
-}
-
-@keyframes slider {
-    0%,
-    20% {
-        left: 0
-    }
-    25%,
-    45% {
-        left: -100%
-    }
-    50%,
-    70% {
-        left: -200%
-    }
-    75%,
-    95% {
-        left: -300%
-    }
-    100% {
-        left: -400%;
-    }
 }
 
 #slide ul {
@@ -361,12 +341,16 @@ h1 span {
     height: 200px;
     width: max-content;
     align-items: center;
-    animation: slider 20s infinite;
 }
 
 #slide ul li {
     display: inline-block;
-    width: 200px;
+    padding: 0 20px;
+    animation: slide-partenaire 20s infinite;
+}
+
+#slide ul img {
+    width: 160px;
 }
 
 
@@ -441,55 +425,63 @@ h2 {
 /* applications */
 
 #app-samples {
-    padding: 70px;
+    padding: 10px;
 }
 
 #app-samples h2 {
     text-align: center;
     color: #fff;
+    margin-top: 20px;
     margin-bottom: 50px;
 }
 
-#app-samples>div {
-    outline: none;
-    overflow: hidden;
+#app-samples button {
+    position: relative;
+    top: 270px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.74);
+    color: #d9294f;
+    border-radius: 20px;
+    font-family: montserrat-bold;
+    font-size: 20px;
+    font-weight: 900;
+    height: 23px;
+    width: 23px;
+    z-index: 1;
+    cursor: pointer;
 }
 
-#app-samples>div::after {
-    content: "<";
-    position: absolute;
-    text-align: center;
-    color: #d9294f;
-    font-size: 25px;
-    width: 30px;
-    left: 20px;
-    margin-top: -290px;
-    border-radius: 100%;
-    background-color: #e2e2e2;
-    transition: all 0.3s ease-in-out 0s;
+#left {
+    margin-left: 50px;
 }
 
-#app-samples>div::before {
-    content: ">";
-    position: absolute;
-    text-align: center;
-    color: #d9294f;
-    font-size: 25px;
-    width: 30px;
-    right: 20px;
-    margin-top: 190px;
-    border-radius: 100%;
-    background-color: #e2e2e2;
-    transition: all 0.3s ease-in-out 0s;
+#right {
+    float: right;
+    margin-right: 50px;
 }
 
 #carte {
-    display: inline-block;
-    width: max-content;
+    margin: 0 80px;
+    overflow: hidden;
+}
+
+#carte ul {
     position: relative;
-    justify-content: center;
-    animation: slider 10s infinite;
-    animation-fill-mode: forwards;
+    display: flex;
+    width: max-content;
+}
+
+#app-samples li {
+    width: 390px;
+    padding: 0 30px;
+    display: inline-block;
+    animation: slide-example 30s infinite;
+}
+
+@media (max-width: 768px) {
+    #app-samples li {
+        width: max-content !important;
+    }
 }
 
 #app-samples img {
@@ -498,14 +490,9 @@ h2 {
     max-width: 100%;
 }
 
-#app-samples figure {
-    width: 330px;
-    margin: 0 30px;
-    display: inline-block;
-}
-
 #app-samples figcaption {
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 12px;
 }
 
 #app-samples figcaption>div>p {
@@ -517,19 +504,31 @@ h2 {
     float: right;
     background-color: #fff;
     border-radius: 10px 3px 3px 10px;
+    height: 20px;
+}
+
+#app-samples figcaption>div {
+    margin-bottom: 20px;
 }
 
 #app-samples figcaption>div>div span {
+    position: relative;
+    float: right;
     color: #d9294f;
-    font-size: 10px;
-    padding: 1px 10px 1px 20px;
-    font-family: montserrat-bold;
+    font-size: 11px;
+    padding: 2px 10px 1px 20px;
+    font-family: montserrat;
 }
 
 #app-samples figcaption>:nth-child(2) {
-    padding: 2px;
-    font-size: 10px;
+    padding: 7px;
+    font-size: 11px;
+    font-family: Ubuntu Mono, monospace;
     background-color: #ED0058;
+}
+
+#app-samples figcaption img {
+    margin-bottom: -2px;
 }
 
 
@@ -537,7 +536,7 @@ h2 {
 
 #expertise {
     background-color: #fff;
-    padding: 20px
+    padding: 10px
 }
 
 #expertise>div {
@@ -562,15 +561,29 @@ h2 {
     font-size: 30px;
 }
 
+#expertise>div>:nth-child(1) ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: Ubuntu Mono, monospace;
+    justify-content: space-between;
+    padding: 20px;
+}
+
 #expertise>div>:nth-child(1) li {
+    text-align: center;
     list-style-type: none;
-    display: inline;
+    margin: 20px 40px;
 }
 
 #expertise>div>:nth-child(1) {
     background-color: #F1F0F3;
     border-radius: 20px;
     width: 50%;
+}
+
+#expertise>div>:nth-child(1) img {
+    height: 45px;
 }
 
 #expertise>div>:nth-child(2) {
@@ -622,26 +635,47 @@ h2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 10%;
+    justify-content: center;
+    margin: 0 0 10% 0;
+    text-align: center;
+    font-family: Ubuntu Mono, monospace;
+    font-size: 18px;
 }
 
 #pret>ul li {
     list-style: none;
+    text-align: center;
 }
 
 #pret img {
-    width: 40px;
-    margin: auto;
-    align-items: center;
+    width: 50%;
 }
 
 #pret>ul li div {
     border: 1px solid #fff;
     height: 70px;
     width: 70px;
-    align-items: center;
+    margin: 15px auto;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
     border-radius: 10px;
+}
+
+#pret>ul li {
+    position: relative;
+    width: 290px;
+}
+
+#pret>ul .fleche::after {
+    content: "";
+    position: absolute;
+    background: url("../images/illustrations/fleche.png") no-repeat;
+    width: 100px;
+    background-size: 35%;
+    height: 50px;
+    top: 35px;
+    right: -40px;
 }
 
 #pret a {
@@ -706,8 +740,16 @@ h2 {
     width: 240px;
     margin: 20px;
     padding: 20px;
-    box-shadow: 0 0 30px 1px rgba(153, 153, 153, 0.13);
+    box-shadow: 0 0 30px 1px rgba(153, 153, 153, 0.171);
     font-family: montserrat-light;
+}
+
+@media (max-width: 768px) {
+    #services2>div>:nth-child(2)>div {
+        width: 100% !important;
+        height: auto !important;
+        margin: 20px 0;
+    }
 }
 
 
@@ -750,7 +792,9 @@ h2 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    font-family: montserrat-lig2t;
+    font-family: montserrat-light;
+    color: #424345;
+    font-size: 13px;
 }
 
 #soutien>div>div {
@@ -773,6 +817,15 @@ h2 {
     }
 }
 
+#soutien b {
+    font-family: montserrat;
+}
+
+#twitter>div {
+    border-radius: 15px;
+    width: 100%;
+}
+
 
 /* footer */
 
@@ -781,9 +834,11 @@ h2 {
     flex-direction: row;
     flex-wrap: wrap;
     color: rgba(255, 255, 255, 0.795);
-    font-size: 19px;
+    font-size: 21px;
+    font-family: montserrat;
     background-color: #2d2d2d;
     padding: 100px 5vh;
+    line-height: 30px;
 }
 
 #foot>* {
@@ -848,6 +903,23 @@ footer address {
 }
 
 #foot button:hover {
-    color: #221044;
+    color: #fff;
     background: none;
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links li {
+    display: inline-block;
+    width: 50px;
+}
+
+.social-links .fab {
+    font-size: 30px;
+}
+
+h6 a {
+    color: #fff !important;
 }

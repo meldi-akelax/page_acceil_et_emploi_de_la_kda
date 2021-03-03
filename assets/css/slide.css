@@ -1,0 +1,87 @@
+/* style code for all slides */
+
+@keyframes slide-partenaire {
+    0%,
+    5% {
+        transform: translateX(0);
+    }
+    7%,
+    17% {
+        transform: translateX(-100%);
+    }
+    20%,
+    29% {
+        transform: translateX(-200%);
+    }
+    32%,
+    41% {
+        transform: translateX(-300%);
+    }
+    44%,
+    52% {
+        transform: translateX(-400%);
+    }
+    55%,
+    63% {
+        transform: translateX(-500%);
+    }
+    66%,
+    74% {
+        transform: translateX(-600%);
+    }
+    77%,
+    85% {
+        transform: translateX(-700%);
+    }
+    88%,
+    96% {
+        transform: translateX(-800%);
+    }
+    99%,
+    100% {
+        transform: translateX(-900%);
+    }
+}
+
+@keyframes slide-example {
+    0%,
+    8% {
+        transform: translateX(0);
+    }
+    11%,
+    19% {
+        transform: translateX(-100%);
+    }
+    22%,
+    30% {
+        transform: translateX(-200%);
+    }
+    33%,
+    41% {
+        transform: translateX(-300%);
+    }
+    44%,
+    52% {
+        transform: translateX(-400%);
+    }
+    55%,
+    63% {
+        transform: translateX(-500%);
+    }
+    66%,
+    74% {
+        transform: translateX(-600%);
+    }
+    77%,
+    85% {
+        transform: translateX(-700%);
+    }
+    88%,
+    96% {
+        transform: translateX(-800%);
+    }
+    99%,
+    100% {
+        transform: translateX(-900%);
+    }
+}
